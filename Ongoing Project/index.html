@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="Java/java.js"></script>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/44228a8359.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <style>
+    .card {
+      margin: 0px auto;
+    }
+    .container {
+      padding-top: 30px;
+      padding-bottom: -5px;
+    }
+    .search {
+      position: absolute;
+      top: 20px;
+      left: 52px;
+    }
+    .title {
+      position: absolute;
+      text-align: center;
+      width: 100%;
+      top: 120px;
+      left: 0px;
+      font-family: Georgia, "Times New Roman", Times, serif;
+    }
+    #temperature {
+      position: absolute;
+      text-align: center;
+      width: 100%;
+      top: 175px;
+      left: -5px;
+      font-family: Georgia, "Times New Roman", Times, serif;
+      font-weight: bold;
+      font-size: 45px;
+    }
+    .units {
+      color: black;
+      position: absolute;
+      text-align: center;
+      width: 100%;
+      top: 190px;
+      left: 50px;
+      font-family: Georgia, "Times New Roman", Times, serif;
+      font-weight: bold;
+      font-size: 15px;
+    }
+
+    .col {
+      font-family: Georgia, "Times New Roman", Times, serif;
+      font-size: 10px;
+      margin-top: -15px;
+      margin-bottom: 30px;
+    }
+    .fa-solid {
+      font-size: 30px;
+
+      margin-left: 8px;
+    }
+    .css {
+      margin-left: -5px;
+      margin-bottom: -20px;
+    }
+    .time {
+      position: absolute;
+      text-align: center;
+      font-size: 18px;
+      width: 100%;
+      top: 155px;
+      left: 0px;
+      font-family: Georgia, "Times New Roman", Times, serif;
+    }
+    .search {
+      position: absolute;
+      text-align: center;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="card" style="width: 18rem">
+        <img src="Images/skylinetall.png" class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title"></h5>
+          <p class="card-text"></p>
+          <div class="row">
+            <div class="col">Tomorrow</div>
+            <div class="col">Tuesday</div>
+            <div class="col">Wednesday</div>
+            <div class="col">Thursday</div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <i class="fa-solid fa-sun"></i>
+            </div>
+            <div class="col">
+              <i class="fa-solid fa-cloud-sun"></i>
+            </div>
+            <div class="col">
+              <i class="fa-solid fa-cloud-sun-rain"></i>
+            </div>
+            <div class="col">
+              <i class="fa-solid fa-sun"></i>
+            </div>
+          </div>
+          <div class="row css">
+            <div class="col">30° | 40°</div>
+            <div class="col">34° | 48°</div>
+            <div class="col">42° | 50°</div>
+            <div class="col">40° | 45°</div>
+          </div>
+        </div>
+        <form id="search-form">
+          <input
+            type="text"
+            class="search"
+            placeholder="Search City"
+            autofocus="on"
+            id="city"
+          />
+          <input type="submit" value="🔍" class="search" />
+        </form>
+      </div>
+
+      <h1 class="title">Chicago</h1>
+
+      <h2 id="temperature"></h2>
+      <span class="units">
+        <a href="#" id="celcius">°C </a>|
+        <a href="#" id="fahrenheit">°F</a>
+      </span>
+      <p class="time"></p>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </body>
+</html>
