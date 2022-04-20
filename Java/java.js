@@ -53,7 +53,7 @@ function getCurrentLocation() {
 }
 
 search("Chicago");
-// let temperature = Math.round(response.data.main.temp);
+//let temperature = Math.round(response.data.main.temp);
 // let temperatureElement = document.querySelector("#temperature");
 // temperatureElement.innerHTML = `${temperature}`; //
 
@@ -74,4 +74,3 @@ search("Chicago");
 
 // let cLink = document.querySelector("#celcius");
 // cLink.addEventListener("click", convertC);
-// //
