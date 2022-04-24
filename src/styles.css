@@ -13,8 +13,9 @@
 .title {
   position: absolute;
   text-align: center;
+  font-size: 40px;
   width: 100%;
-  top: 100px;
+  top: 90px;
   left: 0px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -86,7 +87,7 @@
   left: 70px;
   text-align: center;
 }
-.box {
+.container {
   background-color: white;
   border: black;
 }
