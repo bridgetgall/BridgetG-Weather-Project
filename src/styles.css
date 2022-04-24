@@ -1,3 +1,7 @@
+.box {
+  background-color: white;
+  border: black;
+}
 .card {
   margin: 0px auto;
 }
@@ -16,7 +20,8 @@
   width: 100%;
   top: 100px;
   left: 0px;
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 #temperature {
   position: absolute;
@@ -24,7 +29,8 @@
   width: 100%;
   top: 175px;
   left: -5px;
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: bold;
   font-size: 45px;
 }
@@ -35,13 +41,15 @@
   width: 100%;
   top: 190px;
   left: 50px;
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: bold;
   font-size: 15px;
 }
 
 .col {
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 10px;
   margin-top: -15px;
   margin-bottom: 30px;
@@ -58,19 +66,27 @@
 .time {
   position: absolute;
   text-align: center;
-  font-size: 18px;
+  font-size: 15px;
   width: 100%;
   top: 140px;
   left: 0px;
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
-.search {
-  position: absolute;
-  text-align: center;
-}
+
 .footer {
   text-align: center;
   color: black;
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 9px;
+}
+
+.search {
+  border-radius: 30px;
+  box-shadow: none;
+  border-color: transparent;
+  position: absolute;
+  left: 70px;
+  text-align: center;
 }
