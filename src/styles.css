@@ -102,9 +102,10 @@
   font-size: 15px;
   width: 100%;
   top: 330px;
-  left: -8px;
+  left: -10px;
   color: whitesmoke;
   text-shadow: 1px 1px 5px #3f6ba995;
+  text-transform: capitalize;
 }
 #fahrenheit,
 #celcius:link {
