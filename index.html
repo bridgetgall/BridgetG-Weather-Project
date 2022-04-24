@@ -58,22 +58,26 @@
             type="text"
             class="search"
             placeholder="Search City"
-            autofocus="on"
             id="city"
           />
           <input type="submit" value="🔍" class="search" />
         </form>
       </div>
-      <div class="container">
-        <h1 class="title">Chicago</h1>
 
-        <h2 id="temperature"></h2>
-        <span class="units">
-          <a href="#" id="celcius">°C </a>|
-          <a href="#" id="fahrenheit">°F</a>
-        </span>
-        <p class="time" id="time"></p>
-      </div>
+      <h1 class="title">Chicago</h1>
+      <h2 id="temperature"></h2>
+      <span class="units">
+        <a href="#" id="fahrenheit">°F</a>
+        | <a href="#" id="celcius">°C </a>
+      </span>
+      <ul class="weatherCondition">
+        <li><span id="description">Clear</span></li>
+        <li>Wind: <span id="wind"></span> mph</li>
+        <li>Humidity: <span id="humidity"></span>%</li>
+        <li>Precipitation <span id="precipitation"></span>%</li>
+      </ul>
+
+      <p class="time" id="time"></p>
     </div>
     <p class="footer">
       <a

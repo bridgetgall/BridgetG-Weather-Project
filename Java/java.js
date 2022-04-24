@@ -6,10 +6,15 @@ let hours = now.getHours();
 if (hours < 10) {
   hours = `0${hours}`;
 }
+if (hours > 12) {
+  hours = hours - 12;
+}
+
 let minutes = now.getMinutes();
 if (minutes < 10) {
   minutes = `0${minutes}`;
 }
+
 let days = [
   "Sunday",
   "Monday",
@@ -53,6 +58,7 @@ function getCurrentLocation() {
 }
 
 search("Chicago");
+
 //let temperature = Math.round(response.data.main.temp);
 // let temperatureElement = document.querySelector("#temperature");
 // temperatureElement.innerHTML = `${temperature}`; //
