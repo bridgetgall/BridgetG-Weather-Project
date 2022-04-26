@@ -23,36 +23,7 @@
     <div class="container">
       <div class="card" style="width: 20rem">
         <img src="Images/gradient.jpg" class="card-img-top" alt="..." />
-        <div class="card-body">
-          <h5 class="card-title"></h5>
-          <p class="card-text"></p>
-          <div class="row">
-            <div class="col">Tomorrow</div>
-            <div class="col">Tuesday</div>
-            <div class="col">Wednesday</div>
-            <div class="col">Thursday</div>
-          </div>
-          <div class="row">
-            <div class="col">
-              <i class="fa-solid fa-sun"></i>
-            </div>
-            <div class="col">
-              <i class="fa-solid fa-cloud-sun"></i>
-            </div>
-            <div class="col">
-              <i class="fa-solid fa-cloud-sun-rain"></i>
-            </div>
-            <div class="col">
-              <i class="fa-solid fa-sun"></i>
-            </div>
-          </div>
-          <div class="row css">
-            <div class="col">30° | 40°</div>
-            <div class="col">34° | 48°</div>
-            <div class="col">42° | 50°</div>
-            <div class="col">40° | 45°</div>
-          </div>
-        </div>
+
         <form id="search-form">
           <input
             type="text"
@@ -63,13 +34,18 @@
           <input type="submit" value="🔍" class="search" />
         </form>
       </div>
-      <div class="row content">
-        <h1 class="title">Chicago</h1>
-        <h2 id="temperature"></h2>
-        <span class="units">
-          <a href="#" id="fahrenheit">°F</a>
-          | <a href="#" id="celcius">°C </a>
-        </span>
+
+      <div class="row">
+        <div class="col-4">
+          <h1 class="title">Chicago</h1>
+          <h2 id="temperature"></h2>
+          <img src="" alt="clouds" id="icon" />
+          <span class="units">
+            <a href="#" id="fahrenheit">°F</a>
+            | <a href="#" id="celcius">°C </a>
+          </span>
+        </div>
+
         <ul class="weatherCondition">
           <li><span id="description">Clear</span></li>
           <li>Wind: <span id="wind"></span> mph</li>
