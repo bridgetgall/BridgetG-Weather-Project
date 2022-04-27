@@ -97,18 +97,21 @@
   left: 70px;
   text-align: center;
 }
+
+#icon {
+  width: 65px;
+}
+
 .weatherCondition {
   position: absolute;
   text-align: center;
   font-size: 15px;
-  width: 40%;
-  top: 385px;
-  left: 210px;
+  width: 100%;
+  top: 290px;
+  left: 0px;
   color: whitesmoke;
   text-shadow: 1px 1px 5px #3f6ba995;
   text-transform: capitalize;
-  border: 1px solid whitesmoke;
-  border-width: 2px;
   list-style: none;
 }
 #fahrenheit,
@@ -120,9 +123,4 @@
 #celcius:visited {
   color: whitesmoke;
   text-decoration: none;
-}
-.icon {
-  position: relative;
-  display: block;
-  top: auto;
 }
