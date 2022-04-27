@@ -29,12 +29,12 @@ function formatDate(timestamp) {
 }
 
 function displayWeatherCondition(response) {
-  let cityElement = document.querySelector("#city");
   let temperatureElement = document.querySelector("#temperature");
 
   fahrenheitTemperature = response.data.main.temp;
 
   temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+  let cityElement = document.querySelector("#city");
   cityElement.innerHTML = response.data.name;
   let humidityElement = document.querySelector("#humidity");
   humidityElement.innerHTML = response.data.main.humidity;
