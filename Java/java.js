@@ -1,7 +1,5 @@
 let now = new Date();
 
-let time = document.querySelector(".time");
-
 let hours = now.getHours();
 if (hours < 10) {
   hours = `0${hours}`;
@@ -25,6 +23,7 @@ let days = [
   "Saturday",
 ];
 let day = days[now.getDay()];
+let time = document.querySelector("#time");
 time.innerHTML = `${day} ${hours}:${minutes}`;
 //
 
@@ -39,6 +38,11 @@ function displayWeatherCondition(response) {
   descriptionElement.innerHTML = response.data.weather[0].description;
   let windElement = document.querySelector("#wind");
   windElement.innerHTML = Math.round(response.data.wind.speed);
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}.png`
+  );
 }
 
 function search(city) {
