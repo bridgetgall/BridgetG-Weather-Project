@@ -114,20 +114,16 @@
   text-transform: capitalize;
   list-style: none;
 }
-
-#fahrenheit,
-#celcius{
+.weather-temperature .active {
   color: whitesmoke;
   text-decoration: none;
 }
 
-#fahrenheit:hover {
-  color: rgb(97, 66, 171);
-}
-
+#fahrenheit:hover,
 #celcius:hover {
   color: rgb(97, 66, 171);
 }
-.active {
-  color: rgb(33, 33, 33);
-  cursor: default;
+#celcius,
+#fahrenheit {
+  text-decoration: none;
+}
