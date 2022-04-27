@@ -28,10 +28,13 @@ time.innerHTML = `${day} ${hours}:${minutes}`;
 //
 
 function displayWeatherCondition(response) {
-  document.querySelector("#city").innerHTML = response.data.name;
-  document.querySelector("#temperature").innerHTML = Math.round(
-    response.data.main.temp
-  );
+  let cityElement = document.querySelector("#city");
+  let temperatureElement = document.querySelector("#temperature");
+
+  fahrenheitTemperature = response.data.main.temp;
+
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+  cityElement.innerHTML = response.data.name;
   let humidityElement = document.querySelector("#humidity");
   humidityElement.innerHTML = response.data.main.humidity;
   let descriptionElement = document.querySelector("#description");
@@ -41,7 +44,7 @@ function displayWeatherCondition(response) {
   let iconElement = document.querySelector("#icon");
   iconElement.setAttribute(
     "src",
-    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}.png`
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
 }
 
@@ -60,6 +63,7 @@ function handleSubmit(event) {
   let city = document.querySelector("#city").value;
   search(city);
 }
+
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
@@ -67,26 +71,21 @@ function getCurrentLocation() {
   navigator.geolocation.getCurrentLocation(showPosition);
 }
 
+function displayCelciusTemperature(event) {
+  event.preventDefault();
+  let celciusTemperature = ((fahrenheitTemperature - 32) * 5) / 9;
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(celciusTemperature);
+}
+let celciusLink = document.querySelector("#celcius");
+celciusLink.addEventListener("click", displayCelciusTemperature);
+
+function displayFahrenheitTemperature(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+let fahrenheitLink = document.querySelector("#fahrenheit");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 search("Chicago");
-
-//let temperature = Math.round(response.data.main.temp);
-// let temperatureElement = document.querySelector("#temperature");
-// temperatureElement.innerHTML = `${temperature}`; //
-
-// function convertF(event) {
-//   event.preventDefault();
-//   let temperatureElement = document.querySelector("#temperature");
-//   temperatureElement.innerHTML = 66;
-// }
-// let fLink = document.querySelector("#fahrenheit");
-// fLink.addEventListener("click", convertF);
-
-// //
-// function convertC(event) {
-//   event.preventDefault();
-//   let temperatureElement = document.querySelector("#temperature");
-//   temperatureElement.innerHTML = 19;
-// }
-
-// let cLink = document.querySelector("#celcius");
-// cLink.addEventListener("click", convertC);

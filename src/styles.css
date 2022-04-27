@@ -99,7 +99,7 @@
 }
 
 #icon {
-  width: 65px;
+  width: 80px;
 }
 
 .weatherCondition {
@@ -114,13 +114,20 @@
   text-transform: capitalize;
   list-style: none;
 }
+
 #fahrenheit,
-#celcius:link {
+#celcius{
   color: whitesmoke;
   text-decoration: none;
 }
-#fahrenheit,
-#celcius:visited {
-  color: whitesmoke;
-  text-decoration: none;
+
+#fahrenheit:hover {
+  color: rgb(97, 66, 171);
 }
+
+#celcius:hover {
+  color: rgb(97, 66, 171);
+}
+.active {
+  color: rgb(33, 33, 33);
+  cursor: default;
