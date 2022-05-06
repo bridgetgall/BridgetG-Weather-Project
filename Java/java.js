@@ -24,9 +24,27 @@ function formatDate(timestamp) {
   ];
   let day = days[date.getDay()];
   return `${day} ${hours}:${minutes}`;
-  //let time = document.querySelector("#time");
-  //time.innerHTML = `${day} ${hours}:${minutes}`;
 }
+
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row">`;
+  let days = ["Friday", "Saturday", "Sunday", "Monday"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+            <div class="col">
+              <div class="weather-forecast-date">Tomorrow</div>
+              <i class="fa-solid fa-sun"></i><br />
+              <span class="weather-forecast-min">30° </span> |
+              <span class="weather-forecast-max">40°</span>
+            </div>
+          </div>`;
+  });
+  forecastElement.innerHTML = forecastHTML;
+}
+displayForecast();
 
 function displayWeatherCondition(response) {
   let temperatureElement = document.querySelector("#temperature");

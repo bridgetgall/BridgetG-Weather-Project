@@ -23,34 +23,9 @@
     <div class="container">
       <div class="card" style="width: 20rem">
         <img src="Images/gradient.jpg" class="card-img-top" alt="..." />
-        <div class="weather-forecast">
-          <div class="row">
-            <div class="col">
-              <div class="weather-forecast-date">Tomorrow</div>
-              <i class="fa-solid fa-sun"></i><br />
-              <span class="weather-forecast-min">30° </span> |
-              <span class="weather-forecast-max">40°</span>
-            </div>
-            <div class="col">
-              <div class="weather-forecast-date">Tuesday</div>
-              <i class="fa-solid fa-cloud-sun"></i><br />
-              <span class="weather-forecast-min">30° </span> |
-              <span class="weather-forecast-max">40°</span>
-            </div>
-            <div class="col">
-              <div class="weather-forecast-date">Wednesday</div>
-              <i class="fa-solid fa-cloud-sun-rain"></i><br />
-              <span class="weather-forecast-min">30° </span> |
-              <span class="weather-forecast-max">40°</span>
-            </div>
-            <div class="col">
-              <div class="weather-forecast-date">Thursday</div>
-              <i class="fa-solid fa-sun"></i><br />
-              <span class="weather-forecast-min">30° </span> |
-              <span class="weather-forecast-max">40°</span>
-            </div>
-          </div>
-        </div>
+
+        <div class="weather-forecast" id="forecast"></div>
+
         <form id="search-form">
           <input
             type="text"
@@ -63,7 +38,7 @@
       </div>
 
       <div class="row">
-        <div class="col-5">
+        <div class="col" id="info">
           <h1 class="title">Chicago</h1>
           <p class="time">Last Updated: <span id="date"></span></p>
           <div class="clearfix weather-temperature">
