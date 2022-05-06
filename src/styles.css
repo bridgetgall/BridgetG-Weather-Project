@@ -5,8 +5,9 @@
   padding-top: 30px;
   padding-bottom: -5px;
 }
+
 .search {
-  position: absolute;
+  position: relative;
   top: 20px;
   left: 52px;
 }
@@ -126,4 +127,19 @@
 #celcius,
 #fahrenheit {
   text-decoration: none;
+}
+
+.weather-forecast {
+  margin-top: 20px;
+  text-align: center;
+  margin-top: 30px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: -10px;
+}
+.weather-forecast-min {
+  opacity: 0.55;
+}
+.fa-solid {
+  margin: 5px;
 }
