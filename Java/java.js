@@ -71,7 +71,7 @@ function displayForecast(response) {
               <span class="weather-forecast-max">${Math.round(
                 forecastDay.temp.max
               )}°</span>
-            </div>
+            
           </div>`;
     }
   });
